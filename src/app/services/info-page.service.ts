@@ -10,9 +10,16 @@ export class InfoPageService {
   info: InfoPage = {};
   loaded = false;
 
+  team: any[] = [];
+
   constructor( private http: HttpClient ) {
 
     // console.log('::infoPage Service ready!!!');
+    this.loadInfo();
+    this.loadTeam();
+  }
+
+  private loadInfo() {
 
     // Read JSON file
     this.http.get('assets/data/data-page.json')
@@ -20,9 +27,16 @@ export class InfoPageService {
 
           this.loaded = true;
           this.info = resp;
-
-          console.log(resp);
         });
+  }
 
+  private loadTeam(){
+
+    // Read JSON file
+    this.http.get('https://angular-html-a7dde.firebaseio.com/team.json')
+        .subscribe((resp: any) => {
+
+          this.team = resp;
+        });
   }
 }
