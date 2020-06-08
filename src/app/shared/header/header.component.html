@@ -1,19 +1,38 @@
 <header class="ae-container-fluid ae-container-fluid--full rk-header ">
+
   <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+
   <label for="mobile-menu">
+
     <svg>
+
       <use xlink:href="assets/img/symbols.svg#bar"></use>
     </svg>
+
     <svg>
+
       <use xlink:href="assets/img/symbols.svg#bar"></use>
+
     </svg>
+
     <svg>
+
       <use xlink:href="assets/img/symbols.svg#bar"></use>
+
     </svg>
+
   </label>
+
   <div class="ae-container-fluid rk-topbar">
-    <h1 class="rk-logo"><a routerLink="home">{{ _service.info.title }}<sup>tm</sup></a></h1>
+
+    <h1 class="rk-logo">
+
+      <a routerLink="home">{{ _service.info.title }}<sup>tm</sup></a>
+
+    </h1>
+
     <nav class="rk-navigation">
+
       <ul class="rk-menu">
 
         <li routerLinkActive="active" class="rk-menu__item">
@@ -26,16 +45,29 @@
       </ul>
 
 
-      <form class="rk-search">
-        <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
-        <label for="urku-search">
-          <svg>
-            <use xlink:href="assets/img/symbols.svg#icon-search"></use>
-          </svg>
-        </label>
-      </form>
+      <div class="rk-search">
 
+        <input type="text"
+               (keyup.enter)="searchProduct(txtSearch.value)"
+               placeholder="Search..."
+               id="urku-search"
+               class="rk-search-field"
+               #txtSearch>
+
+        <label for="urku-search">
+
+          <svg>
+
+            <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+
+          </svg>
+
+        </label>
+
+      </div>
 
     </nav>
+
   </div>
+
 </header>
