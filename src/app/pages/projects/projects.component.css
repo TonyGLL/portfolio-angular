@@ -1,0 +1,17 @@
+.responsive-title{
+  display: none;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .responsive-title{
+    text-align: center;
+    display: block;
+  }
+
+  .item{
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+  }
+}
