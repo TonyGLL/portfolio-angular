@@ -20,7 +20,7 @@ export class SkillsService {
     this.http.get('https://angular-html-a7dde.firebaseio.com/skills.json')
         .subscribe((resp: Skills[]) => {
 
-          console.log(resp[0]);
+          console.log(resp);
           this.skills = resp;
         });
   }
