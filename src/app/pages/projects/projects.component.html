@@ -26,15 +26,20 @@
 
   <div *ngIf="!productsService.loading" class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
 
-    <a *ngFor="let product of productsService.products" [routerLink]="['/item', product.cod]" class="rk-item ae-masonry__item animate__animated animate__fadeIn item">
+    <div class="items" *ngFor="let product of productsService.products">
+
       <span class="responsive-title">{{ product.titulo }} - {{ product.categoria }}</span>
-      <img src="assets/productos/{{ product.url }}.jpg" alt="">
-      <div class="item-meta">
-        <h2>Title : {{ product.titulo }}</h2>
-        <p>Category : {{ product.categoria }}</p>
-        <p>% Complexity : {{ product.complexity }}</p>
-      </div>
-    </a>
+
+      <a [routerLink]="['/item', product.cod]" class="rk-item ae-masonry__item animate__animated animate__fadeIn item">
+        <img src="assets/productos/{{ product.url }}.jpg" alt="">
+        <div class="item-meta">
+          <h2>Title : {{ product.titulo }}</h2>
+          <p>Category : {{ product.categoria }}</p>
+          <p>% Complexity : {{ product.complexity }}</p>
+        </div>
+      </a>
+
+    </div>
 
   </div>
 </section>
