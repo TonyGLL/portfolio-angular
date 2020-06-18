@@ -1,0 +1,104 @@
+.box{
+  position: relative;
+  width: 100px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .percent{
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.box .percent svg{
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.box .percent svg circle{
+  width: 150px;
+  height: 150px;
+  fill: none;
+  stroke-width: 10;
+  stroke: #000;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.box .percent svg circle:nth-child(1){
+  stroke-dashoffset: 0;
+  stroke: #f3f3f3;
+}
+
+.box .percent svg .html:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 90) / 100);
+  stroke: #DE4B25;
+}
+
+.box .percent svg .css:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 85) / 100);
+  stroke: #2174F8;
+}
+
+.box .percent svg .javascript:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 70) / 100);
+  stroke: #F8DC00;
+}
+
+.box .percent svg .nodejs:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 45) / 100);
+  stroke: #8CC03F;
+}
+
+.box .percent svg .php:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 52) / 100);
+  stroke: #848FBC;
+}
+
+.box .percent svg .express:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 60) / 100);
+  stroke: #000;
+}
+
+.box .percent svg .angularjs:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 45) / 100);
+  stroke: #BE002E;
+}
+
+.box .percent svg .bootstrap:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 75) / 100);
+  stroke: #4D218F;
+}
+
+.box .percent .number{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+}
+
+.box .percent .number h2{
+  font-size: 38px;
+}
+
+.box .percent .number h2 span{
+  font-size: 19px;
+}
+
+.box .text{
+  padding: 10px 0 0;
+  color: #333;
+  letter-spacing: 1;
+  position: absolute;
+  bottom: 0px;
+}

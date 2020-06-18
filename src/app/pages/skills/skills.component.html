@@ -1,1 +1,30 @@
-<p>skills works!</p>
+<div class="container">
+
+  <div class="row d-flex justify-content-around flex-wrap mt-3">
+
+    <div class="col-4 box animate__animated animate__fadeIn" *ngFor="let skill of skillsService.skills">
+
+      <div class="percent">
+
+        <svg>
+
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle class="{{ skill.name }}" cx="70" cy="70" r="70"></circle>
+
+        </svg>
+
+        <div class="number">
+
+          <h2>{{ skill.percent }}<span>%</span></h2>
+
+        </div>
+
+      </div>
+
+      <h2 class="text">{{ skill.name }}</h2>
+
+    </div>
+
+  </div>
+
+</div>
