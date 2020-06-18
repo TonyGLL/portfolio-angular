@@ -4,4 +4,5 @@ export interface Product {
   cod: string;
   titulo: string;
   url: string;
+  complexity: number;
 }

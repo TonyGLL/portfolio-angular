@@ -473,8 +473,10 @@ body {
   width: 100%;
 }
 .rk-item:hover .item-meta {
-  opacity: 1;
+  background: #000;
+  opacity: 0.8;
   visibility: visible;
+  color: white;
 }
 .rk-item--flex {
   background-position: center center;

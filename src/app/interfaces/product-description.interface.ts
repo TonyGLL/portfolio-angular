@@ -7,4 +7,5 @@ export interface ProductDescription {
   resumen: string;
   subtitulo1: string;
   subtitulo2: string;
+  textColor: string;
 }

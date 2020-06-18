@@ -1,16 +1,13 @@
 <section *ngIf="product">
 
-  <header [ngStyle]="{'background-image': 'url(assets/productos/'+ id +'/main.jpg)'}"
+  <header [ngStyle]="{
+    'background-image': 'url(assets/productos/'+ id +'/main.jpg)',
+    'background-size': 'contain',
+    'background-repeat': 'no-repeat',
+    'background-position': 'center center center'
+  }"
 
-    class="rk-portfolio-cover  item-inside-1">
-
-    <div class="item-inside__meta">
-
-      <h1 class="ae-u-bolder rk-portfolio-title ">{{ product.producto }}</h1>
-
-      <p class="ae-theta rk-portfolio-category ">{{ product.categoria }}</p>
-
-    </div>
+    class="rk-portfolio-cover item-inside-1">
 
   </header>
 
@@ -30,13 +27,13 @@
 
           <span class="ae-lambda">Client: </span>
 
-          <span class="ae-u-bolder">Own Practices</span>
+          <span class="ae-u-bolder">Practices</span>
 
         </p>
 
         <p class="au-underline rk-portfolio-inner-website ">
 
-          <a href="#0" class="ae-kappa">www.website.com</a>
+          <a href="https://tonygll.github.io/portfolio-angular/#/home" class="ae-kappa">Demo</a>
 
         </p>
 
@@ -62,25 +59,7 @@
 
       <div class="ae-grid__item item-lg-6 item-lg--offset-1">
 
-        <img src="assets/productos/{{ id }}/pic-1.jpg" alt="Urku Portfolio">
-
-      </div>
-
-    </div>
-
-    <div class="ae-grid ae-grid--collapse pt-5">
-
-      <div class="ae-grid__item item-lg-8">
-
-        <img src="assets/productos/{{ id }}/pic-2.jpg" alt="Urku Portfolio" class="img-fluid">
-
-      </div>
-
-      <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
-
-        <p>{{ product.desc2 }}</p>
-
-        <p class="ae-u-bolder">{{ product.subtitulo2 }}</p>
+        <img src="assets/productos/{{ id }}/pic-1.jpg" alt="Urku Portfolio" class="img-fluid">
 
       </div>
 
