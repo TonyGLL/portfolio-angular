@@ -4,9 +4,9 @@ export interface InfoPage {
   email?: string;
   short_name?: string;
   author_page?: string;
-  facebook?: string;
-  instagram?: string;
+  github?: string;
   twitter?: string;
-  tumblr?: string;
+  linkedin?: string;
+  codersRank?: string;
   work_team?: any[];
 }

@@ -8,4 +8,5 @@ export interface ProductDescription {
   subtitulo1: string;
   subtitulo2: string;
   textColor: string;
+  date: string;
 }

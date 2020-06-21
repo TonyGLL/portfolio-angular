@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 // Routes
 import { AppRoutingModule } from './app-routing.module';
 
@@ -32,7 +34,8 @@ import { SkillsComponent } from './pages/skills/skills.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -75,6 +75,34 @@
   stroke: #4D218F;
 }
 
+.fa-html5{
+  color: #DE4B25;
+}
+
+.fa-css3-alt{
+  color: #2174F8;
+}
+
+.fa-js-square{
+  color: #F8DC00;
+}
+
+.fa-node-js{
+  color: #8CC03F;
+}
+
+.fa-php{
+  color: #848FBC;
+}
+
+.fa-angular{
+  color: #BE002E;
+}
+
+.fa-bootstrap{
+  color: #4D218F;
+}
+
 .box .percent .number{
   position: absolute;
   top: 0;
