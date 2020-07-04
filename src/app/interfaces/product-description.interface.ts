@@ -9,4 +9,5 @@ export interface ProductDescription {
   subtitulo2: string;
   textColor: string;
   date: string;
+  url: string;
 }
