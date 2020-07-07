@@ -1,12 +1,18 @@
+// Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// Http Client Module
 import { HttpClientModule } from '@angular/common/http';
 
+// Font Awesome Module
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Routes
 import { AppRoutingModule } from './app-routing.module';
+
+// Reactive Forms Module
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Modules
 import { AppComponent } from './app.component';
@@ -18,6 +24,7 @@ import { ItemComponent } from './pages/item/item.component';
 import { SearchComponent } from './pages/search/search.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { SkillsComponent } from './pages/skills/skills.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +36,15 @@ import { SkillsComponent } from './pages/skills/skills.component';
     ItemComponent,
     SearchComponent,
     ProjectsComponent,
-    SkillsComponent
+    SkillsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
