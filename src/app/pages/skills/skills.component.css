@@ -75,6 +75,11 @@
   stroke: #4D218F;
 }
 
+.box .percent svg .vuejs:nth-child(2){
+  stroke-dashoffset: calc(440 - (440 * 40) / 100);
+  stroke: #00C180;
+}
+
 .fa-html5{
   color: #DE4B25;
 }
@@ -101,6 +106,10 @@
 
 .fa-bootstrap{
   color: #4D218F;
+}
+
+.fa-vuejs{
+  color: #00C180;
 }
 
 .box .percent .number{
