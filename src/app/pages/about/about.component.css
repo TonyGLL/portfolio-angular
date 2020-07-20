@@ -1,0 +1,31 @@
+.photo{
+  border-radius: 50%;
+}
+
+.photo-container{
+  border-bottom: 2px solid #ccc;
+}
+
+.info{
+  font-size: 25px !important;
+}
+
+@media screen and (min-width: 360px) {
+  .photo{
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .photo{
+    width: 60%;
+  }
+
+  .info{
+    font-size: 30px;
+  }
+
+  .info .name{
+    font-size: 30px;
+  }
+}

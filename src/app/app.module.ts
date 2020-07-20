@@ -18,7 +18,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { SearchComponent } from './pages/search/search.component';
@@ -31,7 +30,6 @@ import { ContactComponent } from './pages/contact/contact.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PortfolioComponent,
     AboutComponent,
     ItemComponent,
     SearchComponent,
