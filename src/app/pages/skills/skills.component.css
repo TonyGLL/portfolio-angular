@@ -35,23 +35,22 @@
   color: #4D218F;
 }
 
-.fa-vuejs{
-  color: #00C180;
+.fa-react{
+  color: #61DAFB;
 }
 
 .skill-box{
-  cursor: pointer;
   padding: 5px;
   margin-left: 2px;
   margin-bottom: 30px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
 }
 
-.skill-box:hover{
+/* .skill-box:hover{
   transition: all ease 0.3s;
   transform: scale(1.2);
   border: 1px solid #888;
-}
+} */
 
 .skill-title{
   display: flex;

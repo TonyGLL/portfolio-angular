@@ -38,12 +38,10 @@ export class ContactComponent implements OnInit {
 
     this.contactService.loading = true;
 
-    // console.log(values);
     this.contactService.sendMessage(values)
         .subscribe(res => {
 
           this.contactService.loading = false;
-          console.log(res);
           Swal.fire({
 
             position: 'center',
