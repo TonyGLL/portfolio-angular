@@ -2,8 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
-[Portfolio Demo](https://tonygll.github.io/portfolio-angular)
-Theme By: [Pixeden](www.pixeden.com)
+-- [Portfolio Demo](https://tonygll.github.io/portfolio-angular)
+-- Theme By: [Pixeden](www.pixeden.com)
 
 ## Development server
 
