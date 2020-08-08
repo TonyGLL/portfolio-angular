@@ -4,6 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
  - [Portfolio Demo](https://tonygll.github.io/portfolio-angular)
  - Theme By: [Pixeden](www.pixeden.com)
+ - [Fontawesome](https://fontawesome.com)
+ - API: Nodejs with Nodemailer
+ 
 
 ## Development server
 
