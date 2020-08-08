@@ -2,12 +2,15 @@
   border-radius: 50%;
 }
 
-.photo-container{
-  border-bottom: 2px solid #ccc;
+.info{
+  font-size: 20px !important;
+  padding: 0 15px;
 }
 
-.info{
-  font-size: 25px !important;
+@media screen and (min-width: 280px) {
+  .photo{
+    width: 60%;
+  }
 }
 
 @media screen and (min-width: 360px) {
@@ -19,6 +22,7 @@
 @media screen and (min-width: 768px) {
   .photo{
     width: 60%;
+    margin-top: 10px;
   }
 
   .info{
@@ -27,5 +31,33 @@
 
   .info .name{
     font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .photo{
+    width: 35%;
+  }
+
+  .info-box{
+    max-width: 700px !important;
+  }
+
+  .info{
+    font-size: 24px;
+    width: 700px;
+  }
+
+  .info .name{
+    font-size: 24px;
+  }
+
+  .sentence{
+    width: 700px;
+    font-size: 18px !important;
+  }
+
+  .info a{
+    font-size: 16px;
   }
 }

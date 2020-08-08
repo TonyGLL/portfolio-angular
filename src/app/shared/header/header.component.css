@@ -1,0 +1,23 @@
+@media screen and (min-width: 280px){
+  .title{
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 369px){
+  .title{
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .title{
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .title{
+    font-size: 26px;
+  }
+}
