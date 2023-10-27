@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Components
-import { AboutComponent } from './pages/about/about.component';
+import { AboutComponent } from './about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { SearchComponent } from './pages/search/search.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
@@ -13,7 +13,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 // Routes
 const appRoutes: Routes = [
 
-  { path: 'about', component: AboutComponent },
+  {
+    path: 'about',
+    loadChildren: () => import('src/app/about/about-routing.module').then(m => m.AboutRoutingModule)
+  },
 
   { path: 'skills', component: SkillsComponent },
 
@@ -41,4 +44,4 @@ const appRoutes: Routes = [
   ]
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule { }

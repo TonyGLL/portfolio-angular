@@ -10,7 +10,7 @@ export class SkillsService {
 
   skills: Skills[] = [];
 
-  constructor( private http: HttpClient ) {
+  constructor(private http: HttpClient) {
 
     this.loadSkills();
   }
@@ -18,10 +18,8 @@ export class SkillsService {
   loadSkills() {
 
     this.http.get('https://angular-html-a7dde.firebaseio.com/skills.json')
-        .subscribe((resp: Skills[]) => {
-
-          console.log(resp);
-          this.skills = resp;
-        });
+      .subscribe((resp: Skills[]) => {
+        this.skills = resp;
+      });
   }
 }
