@@ -1,0 +1,33 @@
+<div class="ae-grid au-xs-ta-center au-mb-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div
+        *ngFor="let person of team"
+        class="info-box ae-grid__item item-lg-4 ae-kappa animate__animated animate__fadeIn col-4"
+      >
+        <div class="photo-container">
+          <img [src]="person.url" alt="" class="au-mb-3 photo" width="100%" />
+        </div>
+
+        <div class="info">
+          <h5 class="name ae-u-bolder au-mt-2 text-dark">{{ person.name }}</h5>
+
+          <p class="ae-u-bolder au-mb-3 text-{{ person.color }}">
+            {{ person.subtitle }}
+          </p>
+
+          <p class="sentence au-lg-ta-left text-center text-dark">
+            {{ person.sentence }}
+          </p>
+
+          <a
+            target="_blank"
+            href="https://twitter.com/tonikin3"
+            class="ae-u-bolder au-underline"
+            >{{ person.twitter }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

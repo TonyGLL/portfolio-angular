@@ -12,12 +12,9 @@ export class ContactService {
 
   URI = 'https://server-potfolio.herokuapp.com/send-email';
 
-  constructor( private http: HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
   sendMessage(values) {
-
-    console.log(values);
-
     return this.http.post(this.URI, values);
   }
 }

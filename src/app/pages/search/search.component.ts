@@ -9,13 +9,12 @@ import { ProductsService } from '../../services/products.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor( private route: ActivatedRoute,
-               public productsService: ProductsService ) { }
+  constructor(private route: ActivatedRoute,
+    public productsService: ProductsService) { }
 
   ngOnInit(): void {
 
     this.route.params.subscribe(params => {
-
       this.productsService.searchProduct(params.term);
     });
   }

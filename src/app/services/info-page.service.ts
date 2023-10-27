@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { InfoPage } from '../interfaces/info-page.interface';
+import { IGetTeamResponse, InfoPage } from '../interfaces/info-page.interface';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,33 +11,15 @@ export class InfoPageService {
   info: InfoPage = {};
   loaded = false;
 
-  team: any[] = [];
-
-  constructor( private http: HttpClient ) {
-
-    // console.log('::infoPage Service ready!!!');
+  constructor(private http: HttpClient) {
     this.loadInfo();
-    this.loadTeam();
   }
 
-  private loadInfo() {
-
-    // Read JSON file
-    this.http.get('assets/data/data-page.json')
-        .subscribe((resp: InfoPage) => {
-
-          this.loaded = true;
-          this.info = resp;
-        });
+  public loadInfo(): Observable<InfoPage> {
+    return this.http.get('assets/data/data-page.json');
   }
 
-  private loadTeam(){
-
-    // Read JSON file
-    this.http.get('https://angular-html-a7dde.firebaseio.com/team.json')
-        .subscribe((resp: any) => {
-
-          this.team = resp;
-        });
+  public loadTeam(): Observable<IGetTeamResponse[]> {
+    return this.http.get<IGetTeamResponse[]>('https://angular-html-a7dde.firebaseio.com/team.json');
   }
 }

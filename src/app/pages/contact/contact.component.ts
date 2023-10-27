@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 import { ContactService } from '../../services/contact.service';
 
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 
 import Swal from 'sweetalert2';
 
@@ -14,12 +14,12 @@ import Swal from 'sweetalert2';
 })
 export class ContactComponent implements OnInit {
 
-  form: FormGroup;
+  form: UntypedFormGroup;
 
   constructor(
     public contactService: ContactService,
     private router: Router,
-    private builder: FormBuilder
+    private builder: UntypedFormBuilder
   ) {
 
     this.form = this.builder.group({

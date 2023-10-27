@@ -10,3 +10,12 @@ export interface InfoPage {
   codersRank?: string;
   work_team?: any[];
 }
+
+export interface IGetTeamResponse {
+  color: string;
+  name: string;
+  sentence: string;
+  subtitle: string;
+  twitter: string;
+  url: string;
+}

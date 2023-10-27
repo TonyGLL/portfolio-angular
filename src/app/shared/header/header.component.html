@@ -1,42 +1,29 @@
-<header class="ae-container-fluid ae-container-fluid--full rk-header ">
-
-  <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+<header class="ae-container-fluid ae-container-fluid--full rk-header">
+  <input type="checkbox" id="mobile-menu" class="rk-mobile-menu" />
 
   <!-- MENU MOBILE -->
   <label for="mobile-menu">
-
     <svg>
-
       <use xlink:href="assets/img/symbols.svg#bar"></use>
     </svg>
 
     <svg>
-
       <use xlink:href="assets/img/symbols.svg#bar"></use>
-
     </svg>
 
     <svg>
-
       <use xlink:href="assets/img/symbols.svg#bar"></use>
-
     </svg>
-
   </label>
 
   <!-- MENU -->
   <div class="ae-container-fluid rk-topbar">
-
     <h1 class="rk-logo">
-
-      <a routerLink="about" class="title">{{ _service.info.title }}<sup>tm</sup></a>
-
+      <a routerLink="about" class="title">{{ info.title }}<sup>tm</sup></a>
     </h1>
 
     <nav class="rk-navigation">
-
       <ul class="rk-menu">
-
         <li routerLinkActive="active" class="rk-menu__item">
           <a routerLink="about" class="rk-menu__link">About</a>
         </li>
@@ -54,35 +41,31 @@
         </li>
 
         <li class="rk-menu__item">
-          <a href="https://drive.google.com/file/d/1Jwq7QDsbJ4Z7xZ4oxQCACr_4h_1GEcte/view?usp=sharing" target="_blank" class="rk-menu__link">CV</a>
+          <a
+            href="https://drive.google.com/file/d/1Jwq7QDsbJ4Z7xZ4oxQCACr_4h_1GEcte/view?usp=sharing"
+            target="_blank"
+            class="rk-menu__link"
+            >CV</a
+          >
         </li>
-
       </ul>
 
-
       <div class="rk-search">
-
-        <input type="text"
-               (keyup.enter)="searchProduct(txtSearch.value)"
-               placeholder="Search..."
-               id="urku-search"
-               class="rk-search-field"
-               #txtSearch>
+        <input
+          [formControl]="search"
+          type="text"
+          placeholder="Search..."
+          id="urku-search"
+          class="rk-search-field"
+          #txtSearch
+        />
 
         <label for="urku-search">
-
           <svg>
-
             <use xlink:href="assets/img/symbols.svg#icon-search"></use>
-
           </svg>
-
         </label>
-
       </div>
-
     </nav>
-
   </div>
-
 </header>
