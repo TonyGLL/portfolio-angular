@@ -33,7 +33,7 @@ const appRoutes: Routes = [
 
   imports: [
 
-    RouterModule.forRoot(appRoutes, { useHash: true, relativeLinkResolution: 'legacy' })
+    RouterModule.forRoot(appRoutes, { useHash: true })
   ],
   exports: [
 
