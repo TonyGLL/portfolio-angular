@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { InfoPageService } from '../../services/info-page.service';
 import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
@@ -10,7 +10,7 @@ import { InfoPage } from 'src/app/interfaces/info-page.interface';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   public search = new FormControl('');
   private subs = new Subject<void>();
@@ -30,6 +30,11 @@ export class HeaderComponent implements OnInit {
       if (value) this.searchProduct(value);
     });
     this.getInfo();
+  }
+
+  ngOnDestroy(): void {
+    this.subs.next();
+    this.subs.complete();
   }
 
   private searchProduct(term: string) {

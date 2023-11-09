@@ -1,71 +1,62 @@
-<section *ngIf="product">
-
-  <header [ngStyle]="{
-    'background-image': 'url(assets/productos/'+ id +'/main.jpg)',
-    'background-size': 'contain',
-    'background-repeat': 'no-repeat',
-    'background-position': 'center top',
-    'height': '400px'
-  }"
-
-    class="rk-portfolio-cover item-inside-1 pb-0">
-
-  </header>
+@if (product) {
+<section>
+  <header
+    [ngStyle]="{
+      'background-image': 'url(assets/productos/' + id + '/main.jpg)',
+      'background-size': 'contain',
+      'background-repeat': 'no-repeat',
+      'background-position': 'center top',
+      height: '400px'
+    }"
+    class="rk-portfolio-cover item-inside-1 pb-0"
+  ></header>
 
   <div class="ae-container-fluid">
-
-    <div class="ae-grid ae-grid--collapse rk-portfolio-info ">
-
-      <div class="ae-grid__item item-lg-8 item-sm--center au-xs-ta-center au-lg-ta-left">
-
-        <h2 class="rk-portfolio-inner-title ">{{ product.subtitulo1 }}</h2>
-
+    <div class="ae-grid ae-grid--collapse rk-portfolio-info">
+      <div
+        class="ae-grid__item item-lg-8 item-sm--center au-xs-ta-center au-lg-ta-left"
+      >
+        <h2 class="rk-portfolio-inner-title">{{ product.subtitulo1 }}</h2>
       </div>
 
-      <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right rk-portfolio-details">
-
-        <p class="rk-portfolio-inner-client ">
-
+      <div
+        class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right rk-portfolio-details"
+      >
+        <p class="rk-portfolio-inner-client">
           <span class="ae-lambda">Client: </span>
 
           <span class="ae-u-bolder">Practices</span>
-
         </p>
 
-        <p class="au-underline rk-portfolio-inner-website ">
-
-          <a href="{{ product.url }}" target="_blank" class="ae-kappa">Source Code</a>
-
+        <p class="au-underline rk-portfolio-inner-website">
+          <a href="{{ product.url }}" target="_blank" class="ae-kappa"
+            >Source Code</a
+          >
         </p>
 
-        <p class="ae-kappa ae-u-bold rk-portfolio-inner-date ">{{ product.date }}</p>
-
+        <p class="ae-kappa ae-u-bold rk-portfolio-inner-date">
+          {{ product.date }}
+        </p>
       </div>
-
     </div>
-
   </div>
 
   <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
-
     <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
-
       <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
-
         <h4 class="ae-u-bolder">{{ product.subtitulo1 }}</h4>
 
         <p class="ae-eta">{{ product.desc1 }}</p>
-
       </div>
 
       <div class="ae-grid__item item-lg-6 item-lg--offset-1">
-
-        <img src="assets/productos/{{ id }}/pic-1.jpg" alt="Urku Portfolio" class="img-fluid">
-
+        <img
+          src="assets/productos/{{ id }}/pic-1.jpg"
+          alt="Urku Portfolio"
+          class="img-fluid"
+        />
       </div>
-
     </div>
-
   </div>
-
 </section>
+}

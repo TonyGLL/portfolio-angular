@@ -6,6 +6,7 @@ import { faCircle as farCircle, faSquare as farSquare } from '@fortawesome/free-
 import { faStackOverflow, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { InfoPage } from 'src/app/interfaces/info-page.interface';
 import { take } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -26,6 +27,8 @@ export class FooterComponent implements OnInit {
   public info: InfoPage = {};
 
   year: number = new Date().getFullYear();
+
+  public version = environment.version;
 
   constructor(
     private infoPageService: InfoPageService

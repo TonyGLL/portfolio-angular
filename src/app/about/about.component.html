@@ -1,8 +1,8 @@
 <div class="ae-grid au-xs-ta-center au-mb-4">
   <div class="container">
     <div class="row justify-content-center">
+      @for (person of team; track person) {
       <div
-        *ngFor="let person of team"
         class="info-box ae-grid__item item-lg-4 ae-kappa animate__animated animate__fadeIn col-4"
       >
         <div class="photo-container">
@@ -28,6 +28,7 @@
           >
         </div>
       </div>
+      }
     </div>
   </div>
 </div>
