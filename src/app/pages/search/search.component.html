@@ -1,12 +1,15 @@
 <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
-
-  <a *ngFor="let product of productsService.filterProduct" [routerLink]="['/item', product.cod]" class="rk-item ae-masonry__item animate__animated animate__fadeIn">
-    <img src="assets/productos/{{ product.url }}.jpg" alt="">
+  @for (product of productsService.filterProduct; track product) {
+  <a
+    [routerLink]="['/item', product.cod]"
+    class="rk-item ae-masonry__item animate__animated animate__fadeIn"
+  >
+    <img src="assets/productos/{{ product.url }}.jpg" alt="" />
     <div class="item-meta">
       <h2>Title : {{ product.titulo }}</h2>
       <p>Category : {{ product.categoria }}</p>
       <p>% Complexity : {{ product.complexity }}</p>
     </div>
   </a>
-
+  }
 </div>

@@ -6,6 +6,7 @@ import { ContactService } from '../../services/contact.service';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 
 import Swal from 'sweetalert2';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
@@ -38,26 +39,26 @@ export class ContactComponent implements OnInit {
 
     this.contactService.loading = true;
 
-    this.contactService.sendMessage(values)
-        .subscribe(res => {
+    this.contactService.sendMessage(values).pipe(take(1)).subscribe(({
+      next: () => {
+        this.contactService.loading = false;
+        Swal.fire({
 
-          this.contactService.loading = false;
-          Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Email Sent',
+          showConfirmButton: true
+        }).then(result => {
 
-            position: 'center',
-            icon: 'success',
-            title: 'Email Sent',
-            showConfirmButton: true
-          }).then(result => {
+          if (result.value) {
 
-            if (result.value) {
-
-              this.router.navigate(['/about']);
-            }
-          });
-        },
-
-        err => console.log(err));
-
+            this.router.navigate(['/about']);
+          }
+        });
+      },
+      error: (err) => {
+        console.log(err)
+      }
+    }));
   }
 }
