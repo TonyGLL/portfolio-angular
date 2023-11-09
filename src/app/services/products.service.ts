@@ -14,13 +14,10 @@ export class ProductsService {
 
   constructor(
     private http: HttpClient
-  ) {
+  ) { }
 
-    this.loadProducts();
-  }
-
-  private loadProducts(): Observable<any> {
-    return this.http.get('https://angular-html-a7dde.firebaseio.com/products_idx.json');
+  public loadProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>('https://angular-html-a7dde.firebaseio.com/products_idx.json');
   }
 
   getProduct(id: string) {

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
+import { take } from 'rxjs';
+import { Product } from 'src/app/interfaces/product.interface';
 
 @Component({
   selector: 'app-projects',
@@ -8,9 +10,23 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor( public productsService: ProductsService ) { }
+  public loading = true;
+  public projects: Product[] = [];
+
+  constructor(
+    private productsService: ProductsService
+  ) { }
 
   ngOnInit(): void {
+    this.productsService.loadProducts().pipe(take(1)).subscribe(({
+      next: (projects) => {
+        this.projects = projects;
+        this.loading = false;
+      },
+      error: () => {
+        this.loading = false;
+      }
+    }));
   }
 
 }

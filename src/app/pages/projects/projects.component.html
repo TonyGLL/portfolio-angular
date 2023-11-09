@@ -1,7 +1,7 @@
 <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
   <!-- 1 -->
 
-  @if (productsService.loading) {
+  @if (loading) {
   <div align="center">
     <h2>Loading...</h2>
 
@@ -44,23 +44,22 @@
 
     <p>Please wait</p>
   </div>
-  } @if (!productsService.loading) {
+  } @if (!loading) {
   <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
-    @for (product of productsService.products; track product) {
+    @for (project of projects; track project) {
     <div class="items">
       <span class="responsive-title"
-        >{{ product.titulo }} - {{ product.categoria }}</span
+        >{{ project.titulo }} - {{ project.categoria }}</span
       >
-
       <a
-        [routerLink]="['/item', product.cod]"
+        [routerLink]="['/item', project.cod]"
         class="rk-item ae-masonry__item animate__animated animate__fadeIn item"
       >
-        <img src="assets/productos/{{ product.url }}.jpg" alt="" />
+        <img src="assets/productos/{{ project.url }}.jpg" alt="" />
         <div class="item-meta">
-          <h2>Title : {{ product.titulo }}</h2>
-          <p>Category : {{ product.categoria }}</p>
-          <p>% Complexity : {{ product.complexity }}</p>
+          <h2>Title : {{ project.titulo }}</h2>
+          <p>Category : {{ project.categoria }}</p>
+          <p>% Complexity : {{ project.complexity }}</p>
         </div>
       </a>
     </div>
