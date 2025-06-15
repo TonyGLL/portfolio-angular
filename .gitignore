@@ -48,4 +48,5 @@ Thumbs.db
 
 e2e
 package-lock.json
+bun.lock
 .angular
